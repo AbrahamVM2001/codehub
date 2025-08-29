@@ -1,0 +1,33 @@
+---
+const resources_inspiracion = [
+    {"icon":"https://prettyfolio.com/images/prettyfolio.svg","name":"Prettyfolio","description":"Inspiración para portafolios","url":"https://prettyfolio.com/"},
+    {"icon":"https://godly.website/images/favicon.png","name":"Godly","description":"Inspiración de diseño web","url":"https://godly.website/"},
+    {"icon":"https://bentogrids.com/favicon/icon-192x192.png","name":"Bento Grids","description":"Inspiración en grids creativos","url":"https://bentogrids.com/"},
+    {"icon":"","name":"Curated","description":"Inspiración de diseño web","url":"https://www.curated.design/"},
+    {"icon":"https://refero.design/favicon.ico","name":"Refero Design","description":"Referencias de UI/UX","url":"https://refero.design/"},
+    {"icon":"https://calltoinspiration.com/_nuxt/logo.1481ec41.png","name":"Call to Inspiration","description":"Inspiración para UX y UI","url":"https://calltoinspiration.com/"},
+    {"icon":"https://freefrontend.com/favicon.ico","name":"Free Frontend","description":"Colección de snippets frontend","url":"https://freefrontend.com/"}
+];
+---
+
+{resources_inspiracion.map(tool => (
+    <a href={tool.url} target="_blank" rel="noopener noreferrer"
+        class="group flex flex-col border-2 rounded-xl border-palette-700 bg-palette-900 p-4 hover:border-palette-500 hover:scale-105 w-72 h-42"
+    >
+        <div
+        class="flex justify-between items-center me-2"
+        >
+            <h6 
+                class="text-palette-300 font-bold flex justify-center items-center text-center"
+            >
+                <span class="mr-2"><img src={tool.icon} class="w-7" alt={tool.name}></span>{tool.name}
+            </h6>
+            <span class="icon-[streamline-sharp--link-share-2] text-palette-300"></span>
+        </div>
+        <div
+            class="mt-5"
+        >
+            <p class="text-palette-200 group-hp">{tool.description}</p>
+        </div>
+    </a>
+))}

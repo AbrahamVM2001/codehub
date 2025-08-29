@@ -1,0 +1,38 @@
+---
+const resources_js_react = [
+    {"icon":"https://driverjs.com/driver.svg","name":"DriverJS","description":"Recorridos de productos y ayuda contextual","url":"https://driverjs.com/"},
+    {"icon":"","name":"Toastr","description":"Alertas en JS","url":"https://codeseven.github.io/toastr/"},
+    {"icon":"https://lenis.darkroom.engineering/apple-touch-icon.png","name":"Lennis","description":"Animación con js","url":"https://lenis.darkroom.engineering/"},
+    {"icon":"","name":"NumberFlow","description":"Animación de números","url":"https://number-flow.barvian.me/"},
+    {"icon":"https://simpleparallax.com/favicon.ico","name":"simpleParallax","description":"Animaciones de paralaje","url":"https://simpleparallax.com/"},
+    {"icon":"","name":"Heatjs","description":"Generador de mapas de calor y estadísticas","url":"https://github.com/williamtroup/Heat.js"},
+    {"icon":"https://sonner.emilkowal.ski/favicon.ico","name":"Sonner","description":"Toasts para React","url":"https://sonner.emilkowal.ski/"},
+    {"icon":"https://yoopta.dev/favicon.ico","name":"Yoopta-editor","description":"Editor de texto enriquecido","url":"https://yoopta.dev/"},
+    {"icon":"https://rosencharts.com/","name":"Rosen Charts","description":"Biblioteca de gráficos moderna","url":"https://rosencharts.com/"},
+    {"icon":"https://www.reactbits.dev/assets/reactbits-logo-CJ9BJbLk.svg","name":"React Bits","description":"Colección de componentes animados","url":"https://www.reactbits.dev/"},
+    {"icon":"https://blendy.tahazsh.com/favicon.svg","name":"Blendy","description":"Transiciones suaves de elementos","url":"https://blendy.tahazsh.com/"},
+    {"icon":"https://swapy.tahazsh.com/favicon.svg","name":"Swapy","description":"Diseños arrastrables para intercambio","url":"https://swapy.tahazsh.com/"},
+    {"icon":"https://animate-ui.com/favicon-16x16.png","name":"Animate-UI","description":"Componentes animados React + Tailwind","url":"https://animate-ui.com/"},
+    {"icon":"https://odyc.dev/logo.svg","name":"Odyc.js","description":"Biblioteca para hacer videojuegos","url":"https://odyc.dev/"},
+    {"icon":"https://fluxjs.pablomsj.com/icon.png","name":"Fluxjs","description":"Efectos visuales rápidos en JS","url":"https://fluxjs.pablomsj.com/"}
+];
+---
+
+{resources_js_react.map(tool => (
+    <a href={tool.url} target="_blank" rel="noopener noreferrer"
+        class="group flex flex-col border-2 rounded-xl border-palette-700 bg-palette-900 p-4 hover:border-palette-500 hover:scale-105 w-72 h-42"
+    >
+        <div
+            class="flex justify-between items-center me-2"
+        >
+            <h6 class="text-palette-300 font-bold flex justify-center items-center text-center me-2 group-hover:text-palette-200"
+            >
+                <span class="mr-2"><img src={tool.icon} class="w-7" alt=""></span>{tool.name}
+            </h6>
+            <span class="icon-[streamline-sharp--link-share-2] text-palette-300"></span>
+        </div>
+        <div class="mt-5">
+            <p class="text-palette-200 group-hp">{tool.description}</p>
+        </div>
+    </a>
+))}

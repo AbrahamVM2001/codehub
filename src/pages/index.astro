@@ -1,11 +1,154 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "@/layouts/Layout.astro";
+import GeneratorsTools from "@/components/GeneratorsTools.astro";
+import JSReactLibraries from "@/components/JSReactLibraries.astro";
+import DesignInspirationResources from "@/components/DesignInspirationResources.astro";
+import VisualGenerators from "@/components/VisualGenerators.astro";
+import ComponentsUI from "@/components/ComponentsUI.astro";
+import Apis from "@/components/Apis.astro";
+import WebTemplates from "@/components/WebTemplates.astro";
+import IconosAssets from "@/components/IconosAssets.astro";
+import AdvancedVisualization from "@/components/3DAdvancedVisualization.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="CodeHub">
+    <section class="h-[50vh] flex mx-10 text-center items-center justify-center flex-col">
+        <div
+            class="flex items-center gap-x-2 p-1.5 text-palette-300 font-light bg-palette-900 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border border-palette-600 text-sm mb-12 me-2"
+        >
+            <span class="icon-[material-symbols--star-shine-outline] text-xl"></span>
+            <span>Todo lo un develop necesitá.</span>
+        </div>
+        <h1 class="text-6xl font-bold text-palette-50 mb-7">Code<span class="text-palette-600">Hub</span></h1>
+        <h2 class="text-md text-palette-200 font-medium">Recursos esenciales para desarrolladores.</h2>
+    </section>
+    <section id="Tools" class="flex items-center justify-center flex-col mx-10 text-center">
+        <div class="bg-palette-400 w-22 h-22 text-palette-50 flex items-center justify-center rounded-2xl mb-3">
+            <span class="icon-[tabler--tool] text-4xl"></span>
+        </div>
+        <h2 class="text-2xl font-semibold text-palette-50 mb-4">Generadores & Utilidades CSS / Tailwind</h2>
+        <p class="text-palette-100">
+            Herramientas para generar gradientes, grids, efectos (glassmorphism, neumorphism), tamaños de letra responsivos y utilidades que facilitan estilos en Tailwind o CSS.
+        </p>
+        <div class="grid grid-cols-3 gap-4 mt-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2">
+            <GeneratorsTools />
+        </div>
+    </section>
+    <section id="Libraries" class="flex items-center justify-center flex-col mx-10 text-center mt-6">
+        <div class="bg-palette-400 w-22 h-22 text-palette-50 flex items-center justify-center rounded-2xl mb-3">
+            <span class="icon-[hugeicons--libraries] text-4xl"></span>
+        </div>
+        <h2 class="text-2xl font-semibold text-palette-50 mb-4">Populares Librerias</h2>
+        <p class="text-palette-100">Biblotecas y marcos seleccionados que acelerán su proceso de desarrollo</p>
+        <div class="grid grid-cols-3 gap-4 mt-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2">
+            <JSReactLibraries />
+        </div>
+    </section>
+    <section id="DesignInspirationResources" class="flex items-center justify-center flex-col mx-10 text-center mt-6">
+        <div class="bg-palette-400 w-22 h-22 text-palette-50 flex items-center justify-center rounded-2xl mb-3">
+            <span class="icon-[material-symbols--web-asset] text-4xl"></span>
+        </div>
+        <h2 class="text-2xl font-semibold text-palette-50 mb-4">Inspiración & Recursos de Diseño</h2>
+        <p class="text-palette-100">Sitios con colecciones de interfaces, capturas de pantallas y ejemplos creativos para inspirarse en diseño web.</p>
+        <div class="grid grid-cols-3 gap-4 mt-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2">
+            <DesignInspirationResources />
+        </div>
+    </section>
+    <section id="VisualGenerators" class="flex items-center justify-center flex-col mx-10 text-center mt-6">
+        <div class="bg-palette-400 w-22 h-22 text-palette-50 flex items-center justify-center rounded-2xl mb-3">
+            <span class="icon-[material-symbols--web-asset] text-4xl"></span>
+        </div>
+        <h2 class="text-2xl font-semibold text-palette-50 mb-4">Generadores Visuales / UI</h2>
+        <p class="text-palette-100">Generadores de gradientes, fondos, íconos y elementos gráficos listos para usar.</p>
+        <div class="grid grid-cols-3 gap-4 mt-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2">
+            <VisualGenerators />
+        </div>
+    </section>
+    <section id="ComponentsUI" class="flex items-center justify-center flex-col mx-10 text-center mt-6">
+        <div class="bg-palette-400 w-22 h-22 text-palette-50 flex items-center justify-center rounded-2xl mb-3">
+            <span class="icon-[material-symbols--web-asset] text-4xl"></span>
+        </div>
+        <h2 class="text-2xl font-semibold text-palette-50 mb-4">Componentes UI</h2>
+        <p class="text-palette-100">Librerías de componentes listos para usar en proyectos web, principalmente con Tailwind y React.</p>
+        <div class="grid grid-cols-3 gap-4 mt-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2">
+            <ComponentsUI />
+        </div>
+    </section>
+    <section id="Apis" class="flex items-center justify-center flex-col mx-10 text-center mt-6">
+        <div class="bg-palette-400 w-22 h-22 text-palette-50 flex items-center justify-center rounded-2xl mb-3">
+            <span class="icon-[material-symbols--web-asset] text-4xl"></span>
+        </div>
+        <h2 class="text-2xl font-semibold text-palette-50 mb-4">APIs & Herramientas para Devs</h2>
+        <p class="text-palette-100">Utilidades online y APIs que ayudan en desarrollo, debugging y análisis de proyectos.</p>
+        <div class="grid grid-cols-3 gap-4 mt-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2">
+            <Apis />
+        </div>
+    </section>
+    <section id="WebTemplates" class="flex items-center justify-center flex-col mx-10 text-center mt-6">
+        <div class="bg-palette-400 w-22 h-22 text-palette-50 flex items-center justify-center rounded-2xl mb-3">
+            <span class="icon-[material-symbols--web-asset] text-4xl"></span>
+        </div>
+        <h2 class="text-2xl font-semibold text-palette-50 mb-4">Plantillas Web</h2>
+        <p class="text-palette-100">Utilidades online y APIs que ayudan en desarrollo, debugging y análisis de proyectos.</p>
+        <div class="grid grid-cols-3 gap-4 mt-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2">
+            <WebTemplates />
+        </div>
+    </section>
+    <section id="IconosAssets" class="flex items-center justify-center flex-col mx-10 text-center mt-6">
+        <div class="bg-palette-400 w-22 h-22 text-palette-50 flex items-center justify-center rounded-2xl mb-3">
+            <span class="icon-[material-symbols--web-asset] text-4xl"></span>
+        </div>
+        <h2 class="text-2xl font-semibold text-palette-50 mb-4">Iconos & Assets</h2>
+        <p class="text-palette-100">Generador y herramientas online de iconos y assets.</p>
+        <div class="grid grid-cols-3 gap-4 mt-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2">
+            <IconosAssets />
+        </div>
+    </section>
+    <section id="AdvancedVisualization" class="flex items-center justify-center flex-col mx-10 text-center mt-6">
+        <div class="bg-palette-400 w-22 h-22 text-palette-50 flex items-center justify-center rounded-2xl mb-3">
+            <span class="icon-[material-symbols--web-asset] text-4xl"></span>
+        </div>
+        <h2 class="text-2xl font-semibold text-palette-50 mb-4">3D / Visualización Avanzada</h2>
+        <p class="text-palette-100">Herramientas para añadir experiencias 3D o efectos visuales complejos en la web.</p>
+        <div class="grid grid-cols-3 gap-4 mt-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2">
+            <AdvancedVisualization />
+        </div>
+    </section>
+    <footer class="rounded-lg shadow-sm bg-[#0B0017] m-4 text-palette-50 mt-10">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <h6 class="text-2xl font-extrabold">Code<span class="text-palette-600">Hub</span></h6>
+                </a>
+                <ul class="flex flex-wrap items-center mb-6 text-[10px] font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#Tools" class="hover:underline me-4 md:me-6">Generadores & Utilidades CSS / Tailwind</a>
+                    </li>
+                    <li>
+                        <a href="#Libraries" class="hover:underline me-4 md:me-6">Populares Librerias</a>
+                    </li>
+                    <li>
+                        <a href="#DesignInspirationResources" class="hover:underline me-4 md:me-6">Inspiración & Recursos de Diseño</a>
+                    </li>
+                    <li>
+                        <a href="#VisualGenerators" class="hover:underline me-4 md:me-6">Generadores Visuales / UI</a>
+                    </li>
+                    <li>
+                        <a href="#ComponentsUI" class="hover:underline me-4 md:me-6">Componentes UI</a>
+                    </li>
+                    <li>
+                        <a href="#Apis" class="hover:underline me-4 md:me-6">APIs & Herramientas para Devs</a>
+                    </li>
+                    <li>
+                        <a href="#WebTemplates" class="hover:underline me-4 md:me-6">Plantillas Web</a>
+                    </li>
+                    <li>
+                        <a href="#AdvancedVisualization" class="hover:underline">3D / Visualización Avanzada</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© <span id="year"></span>. Made with <span class="icon-[streamline-stickies-color--love]"></span> for developers.</span>
+        </div>
+    </footer>
 </Layout>

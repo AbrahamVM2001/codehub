@@ -1,0 +1,27 @@
+---
+const resources_visuales = [
+    {"icon":"","name":"uiGradients","description":"Generador de gradientes","url":"https://uigradients.com/"},
+    {"icon":"https://bg.ibelick.com/favicon.ico","name":"BG Ibelick","description":"Fondos listos para proyectos","url":"https://bg.ibelick.com/"},
+    {"icon":"","name":"Handy Arrows","description":"Colección de flechas SVG","url":"https://handyarrows.com/"},
+    {"icon":"https://placehold.co/favicon.ico","name":"Placehold","description":"Generador de imágenes por tamaño","url":"https://placehold.co/"},
+    {"icon":"https://shots.so/image/favicon.png","name":"Shots","description":"Crear maquetas increíbles","url":"https://shots.so/"}
+];
+---
+{resources_visuales.map(tool => (
+    <a href={tool.url} target="_blank" rel="noopener noreferrer"
+        class="group flex flex-col border-2 rounded-xl border-palette-700 bg-palette-900 p-4 hover:border-palette-500 hover:scale-105 w-72 h-42"
+    >
+        <div
+            class="flex justify-between items-center me-2"
+        >
+            <h6 class="text-palette-300 font-bold flex justify-center items-center text-center me-2 group-hover:text-palette-200"
+            >
+                <span class="mr-2"><img src={tool.icon} class="w-7" alt=""></span>{tool.name}
+            </h6>
+            <span class="icon-[streamline-sharp--link-share-2] text-palette-300"></span>
+        </div>
+        <div class="mt-5">
+            <p class="text-palette-200 group-hp">{tool.description}</p>
+        </div>
+    </a>
+))}

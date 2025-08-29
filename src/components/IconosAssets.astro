@@ -1,0 +1,24 @@
+---
+const resources_icons = [
+    {"icon":"https://dpidudyah7i0b.cloudfront.net/favicon.ico","name":"Favicon &amp; App Icon Generator","description":"Convert PNG to ICO, JPG to ICO, GIF to ICO.  Create favicon.ico and iOS / Android App Icons.  Edit a favicon to fit your needs, or search our gallery.","url":"https://www.favicon-generator.org/"},
+    {"icon":"https://yesicon.app/favicon.svg","name":"Yesicon","description":"214 conjuntos de iconos con más de 270k iconos, busca en conjuntos de iconos en varios idiomas, filtrado por tipo y estilo, personalización rápida de colores, tamaños y estilos de código de los iconos, copia y descarga en un clic para desarrolladores y diseñadores.","url":"https://yesicon.app/?lang=es"}
+];
+---
+{resources_icons.map(tool => (
+    <a href={tool.url} target="_blank" rel="noopener noreferrer"
+        class="group flex flex-col border-2 rounded-xl border-palette-700 bg-palette-900 p-4 hover:border-palette-500 hover:scale-105 w-72 h-72"
+    >
+        <div
+            class="flex justify-between items-center me-2"
+        >
+            <h6 class="text-palette-300 font-bold flex justify-center items-center text-center me-2 group-hover:text-palette-200"
+            >
+                <span class="mr-2"><img src={tool.icon} class="w-7" alt=""></span>{tool.name}
+            </h6>
+            <span class="icon-[streamline-sharp--link-share-2] text-palette-300"></span>
+        </div>
+        <div class="mt-5">
+            <p class="text-palette-200 group-hp">{tool.description}</p>
+        </div>
+    </a>
+))}

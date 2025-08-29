@@ -1,0 +1,24 @@
+---
+const resources_plantillas = [
+    {"icon":"https://htmlrev.com/images/logo.svg","name":"HTMLrev","description":"Plantillas gratis con Tailwind","url":"https://htmlrev.com/free-tailwind-templates.html"},
+    {"icon":"https://themewagon.com/wp-content/uploads/2021/04/cropped-favicon-192x192.png","name":"Theme Wagon","description":"Plantillas gratuitas y premium","url":"https://themewagon.com/"}
+];
+---
+{resources_plantillas.map(tool => (
+    <a href={tool.url} target="_blank" rel="noopener noreferrer"
+        class="group flex flex-col border-2 rounded-xl border-palette-700 bg-palette-900 p-4 hover:border-palette-500 hover:scale-105 w-72 h-42"
+    >
+        <div
+            class="flex justify-between items-center me-2"
+        >
+            <h6 class="text-palette-300 font-bold flex justify-center items-center text-center me-2 group-hover:text-palette-200"
+            >
+                <span class="mr-2"><img src={tool.icon} class="w-7" alt=""></span>{tool.name}
+            </h6>
+            <span class="icon-[streamline-sharp--link-share-2] text-palette-300"></span>
+        </div>
+        <div class="mt-5">
+            <p class="text-palette-200 group-hp">{tool.description}</p>
+        </div>
+    </a>
+))}

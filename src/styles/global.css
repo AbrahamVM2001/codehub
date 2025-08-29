@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+    --color-palette-50: #ede9fe;
+    --color-palette-100: #ddd6fe;
+    --color-palette-200: #c4b5fd;
+    --color-palette-300: #a78bfa;
+    --color-palette-400: #8b5cf6;
+    --color-palette-500: #7c3aed;
+    --color-palette-600: #6b21a8;
+    --color-palette-700: #581c87;
+    --color-palette-800: #4c1d95;
+    --color-palette-900: #3b0764;
+    --color-palette-950: #0f0a19;
+}
+
+@plugin "@iconify/tailwind4";

@@ -1,0 +1,25 @@
+---
+const resources_3d = [
+    {"icon":"https://freight.cargo.site/t/original/i/190e60d20cfce502e75859eac8f317c83c0b34378cfa4819ae4d0b34f9ba8c8f/Icon.ico","name":"Content Core","description":"Visualizador 3D para web","url":"https://contentcore.xyz/"},
+    {"icon":"https://spline.design/images/icon_favicon32x32.png","name":"Spline","description":"Diseño y exportación de objetos 3D","url":"https://spline.design/"},
+    {"icon":"","name":"The Pixel Canvas","description":"Efecto de desplazamiento creativo","url":"https://ryanmulligan.dev/blog/pixel-canvas/"}
+];
+---
+{resources_3d.map(tool => (
+    <a href={tool.url} target="_blank" rel="noopener noreferrer"
+        class="group flex flex-col border-2 rounded-xl border-palette-700 bg-palette-900 p-4 hover:border-palette-500 hover:scale-105 w-72 h-42"
+    >
+        <div
+            class="flex justify-between items-center me-2"
+        >
+            <h6 class="text-palette-300 font-bold flex justify-center items-center text-center me-2 group-hover:text-palette-200"
+            >
+                <span class="mr-2"><img src={tool.icon} class="w-7" alt=""></span>{tool.name}
+            </h6>
+            <span class="icon-[streamline-sharp--link-share-2] text-palette-300"></span>
+        </div>
+        <div class="mt-5">
+            <p class="text-palette-200 group-hp">{tool.description}</p>
+        </div>
+    </a>
+))}

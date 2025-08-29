@@ -1,0 +1,30 @@
+---
+const resources_dev_tools = [
+    {"icon":"https://publicapis.dev/favicon-pa/favicon-32x32.png","name":"Public APIs","description":"Directorio de APIs públicas","url":"https://publicapis.dev/"},
+    {"icon":"https://ip.guide/apple-touch-icon.png","name":"IP Guide","description":"API de IP","url":"https://ip.guide/"},
+    {"icon":"https://resend.com/static/favicons/favicon@114x114.png","name":"Resend","description":"Envío de emails para devs","url":"https://resend.com/"},
+    {"icon":"https://web-check.xyz/favicon.svg","name":"WebCheck","description":"Seguridad web y análisis","url":"https://web-check.xyz/"},
+    {"icon":"https://jsoncrack.com/favicon.ico","name":"Json Crack","description":"Visualizador de JSON","url":"https://jsoncrack.com/"},
+    {"icon":"https://digger.tools/favicon.ico","name":"Digger Tools","description":"DNS, WHOIS y certificados","url":"https://digger.tools/"},
+    {"icon":"https://www.projectwallace.com/favicon.png","name":"Online CSS Code","description":"Test de calidad de CSS","url":"https://www.projectwallace.com/css-code-quality"},
+    {"icon":"https://10015.io/icons/icon-180x180.png","name":"10015","description":"Caja de herramientas dev","url":"https://10015.io/"}
+];
+---
+{resources_dev_tools.map(tool => (
+    <a href={tool.url} target="_blank" rel="noopener noreferrer"
+        class="group flex flex-col border-2 rounded-xl border-palette-700 bg-palette-900 p-4 hover:border-palette-500 hover:scale-105 w-72 h-42"
+    >
+        <div
+            class="flex justify-between items-center me-2"
+        >
+            <h6 class="text-palette-300 font-bold flex justify-center items-center text-center me-2 group-hover:text-palette-200"
+            >
+                <span class="mr-2"><img src={tool.icon} class="w-7" alt=""></span>{tool.name}
+            </h6>
+            <span class="icon-[streamline-sharp--link-share-2] text-palette-300"></span>
+        </div>
+        <div class="mt-5">
+            <p class="text-palette-200 group-hp">{tool.description}</p>
+        </div>
+    </a>
+))}
