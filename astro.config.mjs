@@ -7,5 +7,10 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
+  },
+  server: {
+    allowedHosts: ['codehub.devabraham.com'],
+    host: true,
+    port: 4321
   }
 });
