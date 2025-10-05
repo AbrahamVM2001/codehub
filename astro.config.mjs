@@ -8,6 +8,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+  devToolbar: {
+    enabled: false
+  },
   server: {
     allowedHosts: ['codehub.devabraham.com'],
     host: true,
